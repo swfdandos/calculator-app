@@ -1,300 +1,75 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Hesap Makinesi</title>
+  <title>Calculator</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
     .calculator {
-      width: 300px;
+      width: 200px;
       margin: 0 auto;
       padding: 20px;
-      border: 1px solid #ccc;
-      background-color: #f5f5f5;
-      border-radius: 5px;
+      text-align: center;
     }
-
-    .calculator input[type="text"] {
+    
+    #result {
       width: 100%;
       margin-bottom: 10px;
       padding: 5px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
     }
-
-    .calculator input[type="button"] {
-      width: 30%;
-      margin: 5px 1%;
-      padding: 15px;
-      font-size: 18px;
-      background-color: #4caf50;
-      color: #fff;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
+    
+    .keypad {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 5px;
     }
-
-    .calculator input[type="button"]:hover {
-      background-color: #45a049;
-    }
-
-    #result {
-      margin-top: 10px;
+    
+    button {
+      width: 100%;
       padding: 10px;
-      font-weight: bold;
-      text-align: center;
-      background-color: #ddd;
-      border-radius: 3px;
     }
   </style>
 </head>
 <body>
   <div class="calculator">
-    <input type="text" id="input1" placeholder="Sayı 1">
-    <input type="text" id="input2" placeholder="Sayı 2">
-    <input type="button" value="+" onclick="calculate('add')">
-    <input type="button" value="-" onclick="calculate('subtract')">
-    <input type="button" value="x" onclick="calculate('multiply')">
-    <input type="button" value="/" onclick="calculate('divide')">
-    <div id="result"></div>
-
-    <div>
-      <input type="button" value="7" onclick="appendNumber(7)">
-      <input type="button" value="8" onclick="appendNumber(8)">
-      <input type="button" value="9" onclick="appendNumber(9)">
-    </div>
-    <div>
-      <input type="button" value="4" onclick="appendNumber(4)">
-      <input type="button" value="5" onclick="appendNumber(5)">
-      <input type="button" value="6" onclick="appendNumber(6)">
-    </div>
-    <div>
-      <input type="button" value="1" onclick="appendNumber(1)">
-      <input type="button" value="2" onclick="appendNumber(2)">
-      <input type="button" value="3" onclick="appendNumber(3)">
-    </div>
-    <div>
-      <input type="button" value="0" onclick="appendNumber(0)">
-      <input type="button" value="." onclick="appendDecimal()">
-      <input type="button" value="Sil" onclick="clearInputs()">
+    <input type="text" id="result" disabled>
+    <div class="keypad">
+      <button onclick="appendToResult('7')">7</button>
+      <button onclick="appendToResult('8')">8</button>
+      <button onclick="appendToResult('9')">9</button>
+      <button onclick="appendToResult('+')">+</button>
+      <button onclick="appendToResult('4')">4</button>
+      <button onclick="appendToResult('5')">5</button>
+      <button onclick="appendToResult('6')">6</button>
+      <button onclick="appendToResult('-')">-</button>
+      <button onclick="appendToResult('1')">1</button>
+      <button onclick="appendToResult('2')">2</button>
+      <button onclick="appendToResult('3')">3</button>
+      <button onclick="appendToResult('*')">*</button>
+      <button onclick="appendToResult('0')">0</button>
+      <button onclick="appendToResult('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="appendToResult('/')">/</button>
+      <button onclick="clearResult()">C</button>
     </div>
   </div>
 
   <script>
-    function calculate(operation) {
-      var num1 = parseFloat(document.getElementById('input1').value);
-      var num2 = parseFloat(document.getElementById('input2').value);
-      var result;
+    let result = document.getElementById('result');
 
-      if (isNaN(num1) || isNaN(num2)) {
-        document.getElementById('result').innerHTML = "Geçerli sayılar girin.";
-  return;
-}
-
-switch (operation) {
-  case 'add':
-    result = num1 + num2;
-    break;
-  case 'subtract':
-    result = num1 - num2;
-    break;
-  case 'multiply':
-    result = num1 * num2;
-    break;
-  case 'divide':
-    if (num2 === 0) {
-      document.getElementById('result').innerHTML = "Bölme işlemi için 0 giremezsiniz.";
-      return;
+    function appendToResult(value) {
+      result.value += value;
     }
-    result = num1 / num2;
-    break;
-  default:
-    result = 0;
-    break;
-}
 
-document.getElementById('result').innerHTML = "Sonuç: " + result;
-}
+    function calculate() {
+      try {
+        result.value = eval(result.value);
+      } catch (error) {
+        result.value = 'Error';
+      }
+    }
 
-function appendNumber(number) {
-var input = document.getElementById('input1');
-input.value += number;
-}
-
-function appendDecimal() {
-var input = document.getElementById('input1');
-if (!input.value.includes('.')) {
-  input.value += '.';
-}
-}
-
-function clearInputs() {
-document.getElementById('input1').value = '';
-document.getElementById('input2').value = '';
-document.getElementById('result').innerHTML = '';
-}
-</script>
+    function clearResult() {
+      result.value = '';
+    }
+  </script>
 </body>
 </html>
-
-
-
-
- -->
-
-
-
-
-
-
-
- <!DOCTYPE html>
-<html>
-<head>
-  <title>Hesap Makinesi</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    .calculator {
-      width: 300px;
-      margin: 0 auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      background-color: #f5f5f5;
-      border-radius: 5px;
-    }
-
-    .calculator input[type="text"] {
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 5px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-    }
-
-    .calculator input[type="button"] {
-      width: 30%;
-      margin: 5px 1%;
-      padding: 15px;
-      font-size: 18px;
-      background-color: #4caf50;
-      color: #fff;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-
-    .calculator input[type="button"]:hover {
-      background-color: #45a049;
-    }
-
-    #result {
-      margin-top: 10px;
-      padding: 10px;
-      font-weight: bold;
-      text-align: center;
-      background-color: #ddd;
-      border-radius: 3px;
-    }
-  </style>
-</head>
-<body>
-  <div class="calculator">
-    <input type="text" id="input1" placeholder="Sayı 1">
-    <input type="text" id="input2" placeholder="Sayı 2">
-    <input type="button" value="+" onclick="calculate('add')">
-    <input type="button" value="-" onclick="calculate('subtract')">
-    <input type="button" value="x" onclick="calculate('multiply')">
-    <input type="button" value="/" onclick="calculate('divide')">
-    <div id="result"></div>
-
-    <div>
-      <input type="button" value="7" onclick="appendNumber(7)">
-      <input type="button" value="8" onclick="appendNumber(8)">
-      <input type="button" value="9" onclick="appendNumber(9)">
-    </div>
-    <div>
-      <input type="button" value="4" onclick="appendNumber(4)">
-      <input type="button" value="5" onclick="appendNumber(5)">
-      <input type="button" value="6" onclick="appendNumber(6)">
-    </div>
-    <div>
-      <input type="button" value="1" onclick="appendNumber(1)">
-      <input type="button" value="2" onclick="appendNumber(2)">
-      <input type="button" value="3" onclick="appendNumber(3)">
-    </div>
-    <div>
-      <input type="button" value="0" onclick="appendNumber(0)">
-      <input type="button" value="." onclick="appendDecimal()">
-      <input type="button" value="Sil" onclick="clearInputs()">
-    </div>
-  </div>
-
-  <script>
-    function calculate(operation) {
-      var num1 = parseFloat(document.getElementById('input1').value);
-      var num2 = parseFloat(document.getElementById('input2').value);
-      var result;
-
-      if (isNaN(num1) || isNaN(num2)) {
-        document.getElementById('result').innerHTML = "Geçerli sayılar girin.";
-  return;
-}
-
-switch (operation) {
-  case 'add':
-    result = num1 + num2;
-    break;
-  case 'subtract':
-    result = num1 - num2;
-    break;
-  case 'multiply':
-    result = num1 * num2;
-    break;
-  case 'divide':
-    if (num2 === 0) {
-      document.getElementById('result').innerHTML = "Bölme işlemi için 0 giremezsiniz.";
-      return;
-    }
-    result = num1 / num2;
-    break;
-  default:
-    result = 0;
-    break;
-}
-
-document.getElementById('result').innerHTML = "Sonuç: " + result;
-}
-
-function appendNumber(number) {
-var input = document.getElementById('input1');
-input.value += number;
-}
-
-function appendDecimal() {
-var input = document.getElementById('input1');
-if (!input.value.includes('.')) {
-  input.value += '.';
-}
-}
-
-function clearInputs() {
-document.getElementById('input1').value = '';
-document.getElementById('input2').value = '';
-document.getElementById('result').innerHTML = '';
-}
-
-</script>
-<script src="functioncalculate.js"></script>
-</body>
-</html>
-
-
-
-
-
-
