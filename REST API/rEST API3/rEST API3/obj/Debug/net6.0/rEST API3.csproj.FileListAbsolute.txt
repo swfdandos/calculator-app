@@ -1,0 +1,7 @@
+C:\Users\burha\Documents\GitHub\calculator-app\REST API\rEST API3\rEST API3\obj\Debug\net6.0\rEST API3.csproj.AssemblyReference.cache
+C:\Users\burha\Documents\GitHub\calculator-app\REST API\rEST API3\rEST API3\obj\Debug\net6.0\rEST API3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\burha\Documents\GitHub\calculator-app\REST API\rEST API3\rEST API3\obj\Debug\net6.0\rEST API3.AssemblyInfoInputs.cache
+C:\Users\burha\Documents\GitHub\calculator-app\REST API\rEST API3\rEST API3\obj\Debug\net6.0\rEST API3.AssemblyInfo.cs
+C:\Users\burha\Documents\GitHub\calculator-app\REST API\rEST API3\rEST API3\obj\Debug\net6.0\rEST API3.csproj.CoreCompileInputs.cache
+C:\Users\burha\Documents\GitHub\calculator-app\REST API\rEST API3\rEST API3\obj\Debug\net6.0\rEST API3.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\burha\Documents\GitHub\calculator-app\REST API\rEST API3\rEST API3\obj\Debug\net6.0\rEST API3.MvcApplicationPartsAssemblyInfo.cache
