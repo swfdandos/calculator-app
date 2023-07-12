@@ -1,7 +1,0 @@
-C:\Users\burha\Documents\GitHub\calculator-app\REST API\REST API using\REST API using\obj\Debug\net6.0\REST API using.csproj.AssemblyReference.cache
-C:\Users\burha\Documents\GitHub\calculator-app\REST API\REST API using\REST API using\obj\Debug\net6.0\REST API using.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\burha\Documents\GitHub\calculator-app\REST API\REST API using\REST API using\obj\Debug\net6.0\REST API using.AssemblyInfoInputs.cache
-C:\Users\burha\Documents\GitHub\calculator-app\REST API\REST API using\REST API using\obj\Debug\net6.0\REST API using.AssemblyInfo.cs
-C:\Users\burha\Documents\GitHub\calculator-app\REST API\REST API using\REST API using\obj\Debug\net6.0\REST API using.csproj.CoreCompileInputs.cache
-C:\Users\burha\Documents\GitHub\calculator-app\REST API\REST API using\REST API using\obj\Debug\net6.0\REST API using.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\burha\Documents\GitHub\calculator-app\REST API\REST API using\REST API using\obj\Debug\net6.0\REST API using.MvcApplicationPartsAssemblyInfo.cache
