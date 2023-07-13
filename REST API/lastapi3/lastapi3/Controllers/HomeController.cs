@@ -16,12 +16,15 @@ namespace lastapi3.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            string connectionString = "ServiceBusConnectionString";
+
+            string connectionString = "Endpoint=sb://calculator-servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=iogSf/xR6uesY6Ca7amEVRAX9h24W4ZTl+ASbPXCTcY=";
             string queueName = "calculatormq";
             _queueClient = new QueueClient(connectionString, queueName);
         }
 
-        public IActionResult Index()
+
+
+    public IActionResult Index()
         {
             return View();
         }
@@ -55,7 +58,7 @@ namespace lastapi3.Controllers
 
             // Hesap sonucunu Service Bus kuyruğuna gönderme
             string messageToSend = result.ToString();
-            SendMessage(messageToSend);
+            _ = SendMessage(messageToSend);
 
             return Ok(result);
         }
