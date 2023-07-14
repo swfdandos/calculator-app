@@ -17,7 +17,9 @@ namespace lastapi3.Controllers
         {
             _logger = logger;
 
-            string connectionString = "Endpoint=sb://calculator-servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=iogSf/xR6uesY6Ca7amEVRAX9h24W4ZTl+ASbPXCTcY=";
+            string connectionString = "Endpoint=sb://calculator-servicebus.servicebus.windows.net/" +
+                ";SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=iogSf" +
+                "/xR6uesY6Ca7amEVRAX9h24W4ZTl+ASbPXCTcY=";
             string queueName = "calculatormq";
             _queueClient = new QueueClient(connectionString, queueName);
         }
