@@ -72,18 +72,18 @@ namespace lastapi3.Controllers
             await _queueClient.SendAsync(encodedMessage);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> ReceiveMessage()
-        {
-            var receivedMessage = await _queueClient.ReceiveAsync();
-            if (receivedMessage != null)
-            {
-                var messageBody = Encoding.UTF8.GetString(receivedMessage.Body);
-                await _queueClient.CompleteAsync(receivedMessage.SystemProperties.LockToken);
-                return Ok(messageBody);
-            }
-            return NoContent();
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> ReceiveMessage()
+        //{
+        //    var receivedMessage = await _queueClient.ReceiveAsync();
+        //    if (receivedMessage != null)
+        //    {
+        //        var messageBody = Encoding.UTF8.GetString(receivedMessage.Body);
+        //        await _queueClient.CompleteAsync(receivedMessage.SystemProperties.LockToken);
+        //        return Ok(messageBody);
+        //    }
+        //    return NoContent();
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
