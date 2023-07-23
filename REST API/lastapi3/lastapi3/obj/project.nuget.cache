@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TUh4MMcftGAmZWU7mAK6f3oGPxKTF6XcIE0Vm0iNKVFfOR/8BpLUi1EDyxz55oT6rd/o0s1OeHCsZR1iwcvBuQ==",
+  "dgSpecHash": "U5/Pw+U1a/EHMjiz4DhgySGhIpQIogOnPHqhIejUt2OH0AhuwpQ3q8l8fkZruV+OE69T4LKnEX7vyv2Hx9VDmg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\burha\\Documents\\GitHub\\calculator-app\\REST API\\lastapi3\\lastapi3\\lastapi3.csproj",
+  "projectFilePath": "c:\\Users\\burha\\Documents\\GitHub\\calculator-app\\REST API\\lastapi3\\lastapi3\\lastapi3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\burha\\.nuget\\packages\\azure.core\\1.32.0\\azure.core.1.32.0.nupkg.sha512",
     "C:\\Users\\burha\\.nuget\\packages\\azure.core.amqp\\1.3.0\\azure.core.amqp.1.3.0.nupkg.sha512",

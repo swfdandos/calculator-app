@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\burha\\Documents\\GitHub\\calculator-app\\REST API\\lastapi3\\lastapi3\\lastapi3.csproj": {}
+    "c:\\Users\\burha\\Documents\\GitHub\\calculator-app\\REST API\\lastapi3\\lastapi3\\lastapi3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\burha\\Documents\\GitHub\\calculator-app\\REST API\\lastapi3\\lastapi3\\lastapi3.csproj": {
+    "c:\\Users\\burha\\Documents\\GitHub\\calculator-app\\REST API\\lastapi3\\lastapi3\\lastapi3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\burha\\Documents\\GitHub\\calculator-app\\REST API\\lastapi3\\lastapi3\\lastapi3.csproj",
+        "projectUniqueName": "c:\\Users\\burha\\Documents\\GitHub\\calculator-app\\REST API\\lastapi3\\lastapi3\\lastapi3.csproj",
         "projectName": "lastapi3",
-        "projectPath": "C:\\Users\\burha\\Documents\\GitHub\\calculator-app\\REST API\\lastapi3\\lastapi3\\lastapi3.csproj",
+        "projectPath": "c:\\Users\\burha\\Documents\\GitHub\\calculator-app\\REST API\\lastapi3\\lastapi3\\lastapi3.csproj",
         "packagesPath": "C:\\Users\\burha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\burha\\Documents\\GitHub\\calculator-app\\REST API\\lastapi3\\lastapi3\\obj\\",
+        "outputPath": "c:\\Users\\burha\\Documents\\GitHub\\calculator-app\\REST API\\lastapi3\\lastapi3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\burha\\AppData\\Roaming\\NuGet\\NuGet.Config",
